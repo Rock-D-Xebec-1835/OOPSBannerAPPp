@@ -1,23 +1,23 @@
 /*
-OOPSBannerApp UC2 - OOPS Banner Display Application
+OOPSBannerApp UC3 - OOPS Banner Display Application
 
-This class demonstrates the creation of a visual banner displaying the word "OOPS" composed of Asterisks(*)
+This class demonstrates the creation of a visual banner displaying the word "OOPS" with the help of .join()method.
 @author Developer
-@version 2
+@version 3
 */
 
 
-public class OOPSBannerAppUC2{
+public class OOPSBannerAppUC3{
 	// Main method to run the banner display
 	public static void main(String[] args){
-	//Each line corresponds to a row in banner for letters O, O, P, S
-		System.out.println("   ***   " + " " + "   ***   " + " " + "****** " + " " + "   ******");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "**   **" + " " + "  ***    ");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "**   **" + " " + "  ***    ");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "****** " + " " + "    ***  ");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "**     " + " " + "      ***");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "**     " + " " + "      ***");
-		System.out.println(" **   ** " + " " + " **   ** " + " " + "**     " + " " + "    ***  ");
-		System.out.println("   ***   " + " " + "   ***   " + " " + "**     " + " " + " *****   ");
+		//String.join() method is used to concatenate the strings.
+		System.out.println(String.join(" ", "   ***   "  , "   ***   "  , "****** "  , "   ******"));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "**   **"  , "  ***    "));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "**   **"  , "  ***    "));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "****** "  , "    ***  "));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "**     "  , "      ***"));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "**     "  , "      ***"));
+		System.out.println(String.join(" ", " **   ** "  , " **   ** "  , "**     "  , "    ***  "));
+		System.out.println(String.join(" ", "   ***   "  , "   ***   "  , "**     "  , " *****   "));
 	}
 }
