@@ -1,33 +1,68 @@
 /*
-OOPSBannerApp UC5 - OOPS Banner Display Application using Inline Array Initialization
+OOPSBannerApp UC6 - OOPS Banner Display Application using Methods to print letters
 
-This class demonstrates the creation of a visual banner displaying the word "OOPS" with the help of Inline Array Initialization.
+This class demonstrates the creation of a visual banner displaying the word "OOPS" with the help of Dedicated methods to print the letters.
 @author Developer
-@version 5
+@version 6
 */
 
+class Util{
+	//Define methods to print letters
+	public static String[] printOLetter(){
+		String lines[] = {
+			"   ***   ",
+			" **   ** ",
+			" **   ** ",
+			" **   ** ",
+			" **   ** ",
+			" **   ** ",
+			" **   ** ",
+			"   ***   "
+		};
+		return lines;
 
+	}
+	public static String[] printPLetter(){
+		String lines[] = {
+			" ******  ",
+			" **   ** ",
+			" ******  ",
+			" **      ",
+			" **      ",
+			" **      ",
+			" **      ",
+			" **      "
+		};
+		return lines;
+
+	}
+	public static String[] printSLetter(){
+		String lines[] = {
+		"   ****** ",
+		"  ***     ",
+		"  ***     ",
+		"    ***   ",
+		"      *** ",
+		"      *** ",
+		"    ***   ",
+		" *****    "
+		};
+		return lines;
+
+	}
+
+	
+	
+}
 
 public class OOPSBannerApp{
-	// Main method to run the banner display
+	
 	public static void main(String[] args){
-		//Define String Array Variable to hold the OOPS banner lines
-		//Each line represents a row in the banner for the letters O, O, P, S
-		String[] lines = {
-			String.join(" | ", "   ***   "  , "   ***   "  , " ******  "  , "   ****** "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " **   ** "  , "  ***     "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " **   ** "  , "  ***     "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " ******  "  , "    ***   "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " **      "  , "      *** "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " **      "  , "      *** "),
-			String.join(" | ", " **   ** "  , " **   ** "  , " **      "  , "    ***   "),
-			String.join(" | ", "   ***   "  , "   ***   "  , " **      "  , " *****    ")
-		};
-		//For loop to print all the lines so that it will print OOPS altogether.
-		for(String line : lines){
-			System.out.println(line);
+		String bannerO[] = Util.printOLetter();
+		String bannerP[] = Util.printPLetter();
+		String bannerS[] = Util.printSLetter();
+		for(int i = 0; i < 8; i++){
+			System.out.println(bannerO[i] + "  " + bannerO[i] + "  " + bannerP[i] + "  " + bannerS[i]);
 		}
-		
-		
 	}
 }
